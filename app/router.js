@@ -1,9 +1,8 @@
 import EmberRouter from '@ember/routing/router';
-import config from 'video-web-app/config/environment';
 
-export default class Router extends EmberRouter {
-  location = config.locationType;
-  rootURL = config.rootURL;
-}
+export default class Router extends EmberRouter {}
 
-Router.map(function () {});
+Router.map(function () {
+  this.route('videos', { path: '/' });
+  this.route('view', { path: '/view/:video' });
+});
